@@ -67,14 +67,22 @@ class APresenter(
     private val navigator: Navigator,
 ) : Presenter<AScreen.State> {
     @Composable
-    override fun present() = AScreen.State(
-        title = "A",
-        message = "Hello World! First Screen",
-        eventSink = { event ->
-            when (event) {
-                AScreen.Event.Back -> navigator.popRoot(ABCResult.Cancel)
-                AScreen.Event.Next -> navigator.goTo(BScreen)
+    override fun present(): AScreen.State {
+
+        return AScreen.State(
+            title = "A",
+            message = "Hello World! First Screen",
+            eventSink = { event ->
+                when (event) {
+                    AScreen.Event.Back -> {
+                        navigator.popRoot(ABCResult.Cancel)
+                    }
+
+                    AScreen.Event.Next -> {
+                        navigator.goTo(BScreen)
+                    }
+                }
             }
-        }
-    )
+        )
+    }
 }
