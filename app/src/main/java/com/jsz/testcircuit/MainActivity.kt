@@ -19,7 +19,7 @@ import com.jsz.testcircuit.screens.DetailsScreenUi
 import com.jsz.testcircuit.screens.MainPresenter
 import com.jsz.testcircuit.screens.MainScreen
 import com.jsz.testcircuit.screens.MainScreenUi
-import com.jsz.testcircuit.theme.TacoTheme
+import com.jsz.testcircuit.theme.CircuitTheme
 import com.slack.circuit.backstack.rememberSaveableBackStack
 import com.slack.circuit.foundation.Circuit
 import com.slack.circuit.foundation.CircuitCompositionLocals
@@ -75,7 +75,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val backStack = rememberSaveableBackStack(MainScreen)
             val navigator = rememberCircuitNavigator(backStack)
-            TacoTheme {
+            CircuitTheme {
                 CircuitCompositionLocals(circuit) {
                     ContentWithOverlays {
                         NavigableCircuitContent(navigator, backStack)

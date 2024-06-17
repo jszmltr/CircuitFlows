@@ -1,5 +1,3 @@
-// Copyright (C) 2023 Slack Technologies, LLC
-// SPDX-License-Identifier: Apache-2.0
 package com.jsz.testcircuit.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -9,7 +7,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
 @Composable
-fun TacoTheme(
+fun CircuitTheme(
     useDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
