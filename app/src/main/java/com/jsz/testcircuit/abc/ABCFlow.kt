@@ -25,15 +25,18 @@ import kotlinx.parcelize.Parcelize
  * There is no way to pass things from here to screen. The only way to pass things is to
  * use the Screen constructor when navigating so we either need to pass things between screens
  * even when we don't need them or pop with result and go to next which I think it doesn't make sense
+ * TODO : Implement this , find the good design pattern / naming for this
  *
  * Next things to check and try: opening a bottom sheet with a result mid flow
  * opening flow within a flow and passing result back
+ * TODO
  *
- * Logging Screen Views would be nice
+ * Logging / Analytics
+ * TODO
  *
+ * Starting a flow happens in the UI.
  * We could in theory call this from the presenter , but then we'd need overlay host which is kind of a UI concern.
  * What is lesser evil ? Navigating from UI or having a Ui'ish bit in the presenter
- *
  */
 @OptIn(ExperimentalMaterial3Api::class)
 suspend fun OverlayHost.startABCFlow(
